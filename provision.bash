@@ -13,3 +13,9 @@ rpmquery --quiet bes.x86_64 \
 
 rpmquery --quiet netcdf.x86_64 \
 || yum -y install {netcdf,nco}{,-devel}.x86_64
+
+for env in dev test ops ; do
+  exdir=/data/${env}/example
+
+  mkdir -p -- "$exdir"
+done
